@@ -1,29 +1,26 @@
 package com.company;
 
 import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Scanner scanner = new Scanner (System.in);
-           System.out.println("nhap gia tri a, b cua ham so bac nhat vao:");
-        //float x = scanner.nextFloat();
-        float a = scanner.nextFloat();
-        float b = scanner.nextFloat();
-        if(a == 0 && b != 0) {
-            System.out.println("ham so vo nghiem");
+         int a =  5 > 7 ? 2 : 1;
+        System.out.println(+a);
+        float sum = 0;
+        int count = 0, subjects = 3;
+        Scanner input = new Scanner(System.in);
+        System.out.print( "Enter the marks for " + subjects + " subjects: ");
+        while (count < subjects) {
+            System.out.print("#" + (count+1) + ": ");
+            float mark = input.nextFloat();
+            if (mark < 0) {
+                System.out.println(mark + " ignored");
+                continue;
+            }
+            sum += mark;
+            count++;
         }
-           else if(a == 0 && b == 0){
-               System.out.println("ham so vo so nghiem");
-        }
-              else if (a != 0 && b == 0){
-                  System.out.println("ham so co nghiem bang 0");
-        }
-                    else if ( a != 0 && b != 0){
-                       float c = a/b;
-                       System.out.println("ham so co nghiem la:" +c);
-        }
-
+        System.out.print("Average mark = "+sum/subjects);
     }
 }

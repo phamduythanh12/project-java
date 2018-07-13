@@ -14,9 +14,7 @@ public class DocSoThanhChu {
            hangTram= (x/100);
              //System.out.println("hang don vi"+hangDonVi);
           if ( x >= 10 && x < 20){
-
-              docSoHangChu(x);
-
+              docSoHangMuoi(x);
           }   else {
                 switch(hangTram){
                     case 1:
@@ -40,16 +38,16 @@ public class DocSoThanhChu {
                 }
                 if (hangChuc == 1){
                     int hangMuoi = x%100;
-                    docSoHangChu( hangMuoi);
+                    docSoHangMuoi( hangMuoi);
                 } else {
-                    docSoHangChu2(hangChuc);
+                    docSoHangChuc(hangChuc);
                     docSoHangDonVi(hangDonVi);
                 }
               }
     }
 
 
-       public static void docSoHangChu(int x){
+       public static void docSoHangMuoi(int x){
         switch(x){
             case 10:
                 System.out.print("ten");break;
@@ -74,7 +72,7 @@ public class DocSoThanhChu {
 
         }
     }
-    public static void docSoHangChu2(int x){
+    public static void docSoHangChuc(int x){
         switch(x){
             case 2:
                 System.out.print("twenty ");break;
@@ -101,7 +99,7 @@ public class DocSoThanhChu {
             case 2:
                 System.out.print("two ");break;
             case 3:
-                System.out.print("thir ");break;
+                System.out.print("three ");break;
             case 4:
                 System.out.print("four ");break;
             case 5:
